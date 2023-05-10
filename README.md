@@ -32,10 +32,12 @@ base:
             page_number {int}
             
             date_field { "representative_date" "registration_date_as_date" "creation_date_as_year" "recordation_date_as_date" "execution_date_statement_as_date"}
-                  if date_field != representative_date --- MUST HAVE
+                  if date_field != representative_date -> start_date && end_date are required
+                  
                         start_date { Thu May 13 2004 00:00:00 GMT-0400 (Eastern Daylight Time) }
                         start_date { Thu May 13 2004 00:00:00 GMT-0400 (Eastern Daylight Time) }
 
+             
             sort_field { "representative_date" "full_title" }
                   sort_order { "asc" "desc" }
             
