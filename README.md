@@ -3,7 +3,64 @@ New: In progress Java API for scraping the copyright office public records
 
 (For planning)
 ```mermaid
+classDiagram
 
+Parameter <|-- Subquery
+Parameter <|-- TypeOfWork
+
+class URLBuilder {
+      -String base
+      -HashMap~String|Parameter~ params
+      
+      +setParam(String)
+      
+      +buildUrl()
+      
+}     
+
+
+
+class Parameter~T~ {
+      -String key
+      -String value
+      -T param
+      
+      
+      +toString()
+}
+
+class Subquery {
+      
+      -String queryTerm
+      -String operatorType
+      -String fieldHeading
+      -String searchType
+      
+      +setQueryTerm();
+      +setOperatorType();
+      +setFieldHeading();
+      +setSearchType();
+      +toString();
+}
+
+class TypeOfWork {
+      -String value
+}
+
+
+```
+
+```java
+enum ParamLabels {
+      RECORDS_PER_PAGE,
+      SUBQUERY,
+      TYPE_OF_WORK,
+      REGISTRATION_STATUS,
+      REGISTRATION_CLASS,
+      REGISTRATION_ITEM_TYPES,
+      TYPE_OF_WORK,
+      
+}
 ```
 
 URL BREAKDOWN
@@ -14,6 +71,7 @@ base:
             
             subquery {
                   "queryTerm":"",
+                  "operatorType:"",
                   "fieldHeading":"Keyword",
                   "searchType":"As a Phrase",
                   "searchTypeReverseLookup":{"exact":"Is (exact)","starts_with":"Starts with","contains":"Contains","phrase":"As a Phrase"}
