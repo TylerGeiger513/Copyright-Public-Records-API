@@ -58,9 +58,33 @@ enum ParamLabels {
       REGISTRATION_STATUS,
       REGISTRATION_CLASS,
       REGISTRATION_ITEM_TYPES,
-      TYPE_OF_WORK,
+      TYPE_OF_DOCUMENT,
+      PAGE_NUMBER,
+      DATE_FIELD,
+      START_DATE,
+      END_DATE,
+      SORT_FIELD,
+      SORT_ORDER
       
 }
+
+if (registration_class || registration_class || registration_item_types) {
+      // if both recordation and registration filters are present just default to all records
+      if (type_of_document) {
+            // remove all type_of_work
+            addParam(type_of_work, "all records")
+      }
+      
+      addParam("type_of_work", "registration");
+}
+else if (type_of_document) 
+      addParam(type_of_work", recordation")
+      
+if (date_field != "representative_date" && (!start_date || !endDate)) {
+      date_field = "representative_date"
+}
+
+
 ```
 
 URL BREAKDOWN
