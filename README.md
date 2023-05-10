@@ -1,2 +1,6 @@
 # Copyright-Public-Records-API
-In progress: Using the puppeteer.js library, this application uses headless chrome to automate searching the copyright office public records.... 
+New: In progress Java API for scraping the copyright office public records
+
+(For planning)
+
+project-folder -> file1.txt -> file2.txt -> subfolder1 -> file3.txt -> file4.txt -> subfolder2 -> file5.txt
