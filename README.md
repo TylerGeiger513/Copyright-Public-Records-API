@@ -2,5 +2,27 @@
 New: In progress Java API for scraping the copyright office public records
 
 (For planning)
-
-project-folder -> file1.txt -> file2.txt -> subfolder1 -> file3.txt -> file4.txt -> subfolder2 -> file5.txt
+```mermaid
+classDiagram
+      Filter <|--	ToggleableFilter
+      Filter <|--	CategoryFilter
+      
+      class Filter {
+        -String value
+        -String key                    
+        +String toString()                
+      }
+      class ToggleableFilter {
+        -bool enabled
+   
+        +toggle()
+        +disable()
+        +enable()
+      }
+      class CategoryFilter~T~ {
+        -T selection
+        
+        +setSelection(T Filter)
+      }
+     
+```
