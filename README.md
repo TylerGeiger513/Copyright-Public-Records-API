@@ -3,30 +3,7 @@ New: In progress Java API for scraping the copyright office public records
 
 (For planning)
 ```mermaid
-classDiagram
-      Filter <|-- ToggleableFilter
-      Filter <|-- CategoryFilter
-      
-      class Filter {
-        -String value
-        -String key                    
-        +String toString()                
-      }
-      
-      class ToggleableFilter {
-        -boolean enabled
-        +toggle()
-        +disable()
-        +enable()
-        
-      }
-      
-      class CategoryFilter~T~ {
-        -~T~ selection
-        +setSelection(~T~ selection)
-        +resetToDefault()
-        #String toString()
-      } 
+
 ```
 
 URL BREAKDOWN
