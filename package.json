@@ -1,0 +1,22 @@
+{
+  "name": "publicrecords",
+  "version": "1.0.0",
+  "description": "Allows for automation of the US Copyright Office Public Records Search",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerGeiger513/Copyright-Public-Records-API.git"
+  },
+  "author": "Tyler Geiger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerGeiger513/Copyright-Public-Records-API/issues"
+  },
+  "homepage": "https://github.com/TylerGeiger513/Copyright-Public-Records-API#readme",
+  "dependencies": {
+    "puppeteer": "^20.2.0"
+  }
+}

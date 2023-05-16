@@ -1,0 +1,195 @@
+{
+    "baseUrl": "https://publicrecords.copyright.gov/advanced-search",
+    "parameters": {
+        
+        "records_per_page": {
+            "type": "number",
+            "default": 10,
+            "multivalued": false
+        },
+
+        "type_of_work": {
+            "type": "string",
+            "values": [
+                "all records", "registration", "recordation"
+            ],
+            "default": "all records",
+            "multivalued": true
+        },
+
+        "registration_status": {
+            "type": "string",
+            "values": [
+                "published", "unpublished", "unspecified"
+            ],
+            "multivalued": true
+        },
+
+        "registration_class": {
+            "type": "string",
+            "values": [
+                "MW", "PA", "PRE", "RE", "SR", "TX", "VA", "unspecified", "book", "contribution_to_newspaper_or_periodical", "newspaper_or_periodical", "dramatic_composition", "print_or_pictorial_illustration"
+            ],
+            "multivalued": true
+        },
+
+        "type_of_record": {
+            "type": "string",
+            "values": [
+                "computer_files", "dramatic_work_choreography", "kits", "maps", "motion_pictures", "music", "serials", "text", "cancelled_registration", "visual_material", "unspecified"
+            ],
+            "multivalues": true
+        },
+
+        "type_of_document": {
+            "type": "string",
+            "values": [
+                "assignment", 
+                "mortgage_security_agreement", 
+                "dmca_filing", 
+                "other", 
+                "s_302", 
+                "s_508", 
+                "notice_of_termination", 
+                "declarations_about_the_author", 
+                "court_action", 
+                "court_actions_other_than_clerk", 
+                "mask_works_documents", 
+                "security_interests", 
+                "nafta_statements_of_interest", 
+                "gatt_notices_of_intent_to_enforce_a_copyright", 
+                "unspecified",
+                "exclusive_licenses",
+                "non_exclusive_licenses", 
+                "change_of_address", 
+                "affidavit_declaration_certification", 
+                "will", 
+                "change_of_name", 
+                "counternotice", 
+                "notice_of_termination_203", 
+                "notice_of_termination_304_c", 
+                "notice_of_termination_304_d"
+            ],
+            "multivalued": true
+        },
+
+        "page_number": {
+            "type": "number",
+            "default": 0,
+            "multivalued": false
+        },
+
+        "date_field": {
+            "type": "string",
+            "values": [
+                "representative_date", "registration_date_as_date", "creation_date_as_year", "recordation_date_as_date", "execution_date_statement_as_date"
+            ],
+            "default": "representative_date",
+            "multivalued": false
+        },
+
+        "start_date": {
+            "type": "date",
+            "multivalued": false
+        },
+
+        "end_date": {
+            "type": "date",
+            "multivalued": false
+        },
+
+        "subquery": {
+            "type": "json",
+            "values": {
+                "queryTerm": {
+                    "type": "string",
+                    "default": ""
+                },
+                "fieldHeading": {
+                    "type": "string",
+                    "values": [
+                        "Keyword",
+                        "Title",
+                        "Notes",
+                        "Series",
+                        "all_copyright_numbers",
+                        "Recordation Number",
+                        "Registration Number",
+                        "all_names",
+                        "Author",
+                        "Claimants",
+                        "Party 1",
+                        "Party 2",
+                        "Party 1/2",
+                        "Publisher",
+                        "all_standardized_numbers",
+                        "ISBN",
+                        "ISSN",
+                        "ISRC",
+                        "Publication Location",
+                        "Publisher Number",
+                        "Physical Description"                       
+                    ],
+                    "default": "Keyword"
+                },
+
+                "operatorType": {
+                    "type": "string",
+                    "values": [
+                        "AND", "OR", "NOT", ""
+                    ],
+                    "default": "AND"
+                },
+
+                "searchType": {
+                    "type": "string",
+                    "values": [
+                        "Contains", "Is (exact)", "Starts with", "As a Phrase"
+                    ],
+                    "default": "Contains"
+
+                }
+            },
+            "multivalued": true
+        },
+
+        "sort_field": {
+            "type": "string",
+            "values": [
+                "representative_date", "full_title"
+            ],
+            "default": "representative_date",
+            "multivalued": false
+        },
+
+        "sort_order": {
+            "type": "string",
+            "values": [
+                "asc", "desc"
+            ],
+            "default": "desc",
+            "multivalued": false
+        }
+    },
+
+
+    "default_query": {
+        "records_per_page": 10,
+        "type_of_work": "all records",
+        "page_number": 1,
+        "date_field": "representative_date",
+        "sort_field": "representative_date",
+        "sort_order": "asc",
+        "subquery": {
+            "query": "",
+            "fieldHeading": "Keyword",
+            "operatorType": "AND",
+            "searchType": "Contains"
+        }
+    }
+}
+        
+
+
+
+
