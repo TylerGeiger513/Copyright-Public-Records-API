@@ -125,3 +125,12 @@ base:
             
             
 ```
+
+standards:
+```
+title: textarea[name="s_1_1_8_0"][aria-labelledby="Title_Label"]
+year_of_completion: input[name="s_7_44_0"][aria-labelledby="Year_of__Completion_Label"]
+date_of_first_publication: input[name="s_7_1_42_0"][aria-labelledby="Publication_Date_Label"]
+internal_tracking_number: input[name="s_3_1_4_0"][aria-labelledby="InternalTrackingNumber_Label"]
+
+
