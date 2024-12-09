@@ -1,5 +1,5 @@
 # Copyright-Public-Records-API
-New: In progress Java API for scraping the copyright office public records
+New: In progress ~~Java~~ Typescript   API for scraping the copyright office public records
 
 (For planning)
 ```mermaid
