@@ -1,5 +1,5 @@
 # Copyright-Public-Records-API
-New: In progress JS  API for scraping the copyright office public records
+Switched to JS instead of Java or TS as initally planned so previous class diagrams are no long really relevant
 
 (For planning)
 ```mermaid
